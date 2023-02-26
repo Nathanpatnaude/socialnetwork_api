@@ -2,9 +2,9 @@
 const { User, Thought } = require('../models');
 
 module.exports = {
-//get allUser
+//getAllUser
 
-//get oneUser
+//getOneUser
 
 //createUser
 
