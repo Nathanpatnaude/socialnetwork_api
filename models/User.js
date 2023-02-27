@@ -3,7 +3,7 @@ const { Schema, model, Types } = require('mongoose');
 
 // add userSchema
 const userSchema = new Schema(
-    { // definitions username, email. thoughts, friends
+    { 
         username: {
             type: String,
             unique: true,
@@ -32,7 +32,7 @@ const userSchema = new Schema(
             },
         ],
     },
-    { //options
+    {
         toJSON: {
             virtuals: true,
         },
@@ -41,7 +41,7 @@ const userSchema = new Schema(
 );
 
 // add friendCount virtual
-userSchema.virtual("friendCount").get(() => {
+userSchema.virtual("friendCount").get(function () {
     return this.friends.length;
 });
 
